@@ -1,5 +1,5 @@
-# 42--minishell__MiniUnixShell
-### *A mini unix shell written in C.*
+# 42--minishell__LibraryInAssemblyLanguage
+### *Recoding some basic functions of the libc.*
 
 ## Usage
 
