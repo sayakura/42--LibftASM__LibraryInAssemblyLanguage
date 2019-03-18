@@ -1,0 +1,69 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
+#    Updated: 2019/03/18 06:03:25 by qpeng            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME =				libfts.a
+
+ASM_COMPILER =		nasm -f macho64
+
+ASM_FILES =			ft_strlen \
+					ft_isascii
+					# ft_isdigit	\
+					# ft_isupper	\
+					# ft_islower	\
+					# ft_isalpha	\
+					# ft_isalnum	\
+					# ft_isprint	\
+
+					# ft_puts		\
+					# ft_memcpy	\
+					# ft_toupper	\
+					# ft_tolower	\
+					# ft_strcat	\
+					# ft_pow		\
+					# ft_strdup	\
+					# ft_abs		\
+					# ft_memset	\
+					# ft_rand		\
+					# ft_swap		\
+					# ft_collatz	\
+					# ft_memchr	\
+					# ft_strncmp	\
+					# ft_atoi		\
+					# ft_align \
+					# ft_cat	\
+					# table_type
+
+ASM_S :=			$(addsuffix .s,$(ASM_FILES))
+ASM_OBJ :=			$(addsuffix .o,$(ASM_FILES))
+
+all: $(NAME)
+
+$(NAME): $(ASM_OBJ)
+	@ar rc $(NAME) $(ASM_OBJ)
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "created libfts.a"
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+
+$(ASM_OBJ): %.o: %.s
+	@$(ASM_COMPILER) $< -o $@
+
+clean:
+	@rm test
+
+test: clean $(NAME)
+	@gcc main.c $(NAME) -o test
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "Start Testing"
+	@printf "\e[32m------------------------------------------------------\e[0m\n"
+	@./test
+
+.PHONY: all clean fclean re
