@@ -6,7 +6,7 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:16:10 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/18 06:44:09 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/18 07:10:28 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,38 @@ int		main(void)
 	ln();
 	printf("%sft_isdigit: %s\n", MAGENTA, RESET);
 	printf("char: [%d] ret: %d\n", 0, ft_isdigit(0));
-	printf("char: [%d] ret: %d\n", 1, ft_isdigit(1));
-	printf("char: [%d] ret: %d\n", '1', ft_isdigit('1'));
-	printf("char: [%d] ret: %d\n", '9', ft_isdigit('9'));
+	printf("char: [%c] ret: %d\n", '/', ft_isdigit('/'));
+	printf("char: [%c] ret: %d\n", '0', ft_isdigit('0'));
+	printf("char: [%c] ret: %d\n", '9', ft_isdigit('9'));
+	printf("char: [%c] ret: %d\n", ':', ft_isdigit(':'));
 	printf("char: [%d] ret: %d\n", 127, ft_isdigit(127));
-	printf("char: [%d] ret: %d\n", 128, ft_isdigit(128));
+	ln();
+	printf("%sft_isupper: %s\n", MAGENTA, RESET);
+	printf("char: [%d] ret: %d\n", 1, ft_isupper(1));
+	printf("char: [%c] ret: %d\n", '@', ft_isupper('@'));
+	printf("char: [%c] ret: %d\n", 'A', ft_isupper('A'));
+	printf("char: [%c] ret: %d\n", 'Z', ft_isupper('Z'));
+	printf("char: [%c] ret: %d\n", '[', ft_isupper('['));
+	printf("char: [%d] ret: %d\n", 127, ft_isupper(127));
+	ln();
+	printf("%sft_islower: %s\n", MAGENTA, RESET);
+	printf("char: [%d] ret: %d\n", 1, ft_islower(1));
+	printf("char: [%c] ret: %d\n", '`', ft_islower('`'));
+	printf("char: [%c] ret: %d\n", 'a', ft_islower('a'));
+	printf("char: [%c] ret: %d\n", 'z', ft_islower('z'));
+	printf("char: [%c] ret: %d\n", '{', ft_islower('{'));
+	printf("char: [%d] ret: %d\n", 127, ft_islower(127));
+	ln();
+	printf("%sft_isalpha: %s\n", MAGENTA, RESET);
+	printf("char: [%d] ret: %d\n", 1, ft_isalpha(1));
+	printf("char: [%c] ret: %d\n", '`', ft_isalpha('`'));
+	printf("char: [%c] ret: %d\n", 'a', ft_isalpha('a'));
+	printf("char: [%c] ret: %d\n", 'z', ft_isalpha('z'));
+	printf("char: [%c] ret: %d\n", '{', ft_isalpha('{'));
+	printf("char: [%c] ret: %d\n", '@', ft_isalpha('@'));
+	printf("char: [%c] ret: %d\n", 'A', ft_isalpha('A'));
+	printf("char: [%c] ret: %d\n", 'Z', ft_isalpha('Z'));
+	printf("char: [%c] ret: %d\n", '[', ft_isalpha('['));
+	printf("char: [%d] ret: %d\n", 127, ft_isalpha(127));
 	return (0);
 }

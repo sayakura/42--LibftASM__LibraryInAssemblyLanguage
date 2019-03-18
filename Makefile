@@ -6,20 +6,20 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/18 06:46:20 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/18 07:31:47 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME =				libfts.a
 
-ASM_COMPILER =		nasm -f macho64
+ASM_COMPILER =		nasm -f macho64 -g
 
 ASM_FILES =			ft_strlen \
 					ft_isascii \
 					ft_isdigit \
-					# ft_isupper	\
-					# ft_islower	\
-					# ft_isalpha	\
+					ft_isupper	\
+					ft_islower	\
+					ft_isalpha	\
 					# ft_isalnum	\
 					# ft_isprint	\
 
