@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/18 06:03:25 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/18 06:46:20 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ NAME =				libfts.a
 ASM_COMPILER =		nasm -f macho64
 
 ASM_FILES =			ft_strlen \
-					ft_isascii
-					# ft_isdigit	\
+					ft_isascii \
+					ft_isdigit \
 					# ft_isupper	\
 					# ft_islower	\
 					# ft_isalpha	\
@@ -65,5 +65,8 @@ test: clean $(NAME)
 	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "Start Testing"
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 	@./test
+
+fclean:
+	@rm *.o
 
 .PHONY: all clean fclean re
