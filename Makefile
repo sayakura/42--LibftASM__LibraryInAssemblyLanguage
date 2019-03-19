@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/18 23:17:54 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/19 01:38:38 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ ASM_FILES =			ft_isascii \
 					ft_memset	\
 					ft_memcpy	\
 					ft_strdup	\
+					ft_cat	\
 
 					# ft_toupper	\
 					# ft_tolower	\
@@ -39,7 +40,7 @@ ASM_FILES =			ft_isascii \
 					# ft_strncmp	\
 					# ft_atoi		\
 					# ft_align \
-					# ft_cat	\
+
 
 ASM_S :=			$(addsuffix .s,$(ASM_FILES))
 ASM_OBJ :=			$(addsuffix .o,$(ASM_FILES))

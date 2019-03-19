@@ -6,13 +6,15 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:16:10 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/18 23:17:12 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/19 01:38:15 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libfts.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+
 # define RED     "\x1b[31m"
 # define GREEN   "\x1b[32m"
 # define YELLOW  "\x1b[33m"
@@ -81,6 +83,7 @@ int		main(void)
 		if (i & 1)
 			printf("\n");
 	}
+
 	ln();
 	printf("%sft_isalnum: %s\n", MAGENTA, RESET);
 	for (int i = 32;  i < 127; i++)
@@ -90,6 +93,22 @@ int		main(void)
 		if (i & 1)
 			printf("\n");
 	}
+
+	ln();
+	printf("%sft_isprint: %s\n", MAGENTA, RESET);
+	sprintf(str, "char: [%c] ret: %d", 31, ft_isprint(31));
+	printf("%-40s\n", str);
+	for (int i = 32;  i < 127; i++)
+	{
+		sprintf(str, "char: [%c] ret: %d", i, ft_isprint(i));
+		printf("%-40s", str);
+		if (i & 1)
+			printf("\n");
+	}
+	sprintf(str, "char: [%c] ret: %d", 128, ft_isprint(128));
+	printf("%-40s\n", str);
+	sprintf(str, "char: [%c] ret: %d", 129, ft_isprint(129));
+	printf("%-40s", str);
 
 	ln();
 	printf("%sft_puts: %s\n", MAGENTA, RESET);
@@ -118,5 +137,16 @@ int		main(void)
 	printf("After  ft_memcpy 3:   %s\n", mem2);
 	ft_memcpy(mem2, "123", 0);
 	printf("After  ft_memcpy 0:   %s\n", mem2);
+	ft_memcpy(mem2, "000000000", 10);
+	printf("After  ft_memcpy 0:   %s\n", mem2);
+	ln();
+	printf("%sft_strdup: %s\n", MAGENTA, RESET);
+	char *temp =  ft_strdup("123123123123\n\0");
+	printf("ft_strdup: %s", temp);
+	free(temp);
+	char *temp2 =  ft_strdup("aaaaaa\n\0");
+	printf("ft_strdup: %s", temp2);
+	free(temp2);
+	//free(str2);
 	return (0);
 }
