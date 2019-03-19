@@ -23,7 +23,7 @@ make test
 - [x] ft_strdup
 
 ### Cat
-- [ ] ft_cat
+- [x] ft_cat
 
 ### Bounus
 - [ ] ...
