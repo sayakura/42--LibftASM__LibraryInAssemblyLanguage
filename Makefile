@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/19 06:45:33 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/19 08:29:37 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,23 +14,26 @@ NAME =				libfts.a
 
 ASM_COMPILER =		nasm -f macho64 -g
 
-ASM_FILES =			ft_isascii \
-					ft_isdigit \
+ASM_FILES =			ft_bzero 	\
+					ft_isascii  \
+					ft_isdigit  \
 					ft_isupper	\
 					ft_islower	\
 					ft_isalpha	\
 					ft_isalnum	\
 					ft_isprint	\
+					ft_tolower  \
+					ft_toupper  \
 					ft_puts		\
 					ft_strlen 	\
 					ft_memset	\
 					ft_memcpy	\
 					ft_strdup	\
 					ft_cat	\
-
+					 ft_strcat	\
 					# ft_toupper	\
 					# ft_tolower	\
-					# ft_strcat	\
+
 					# ft_pow		\
 					# ft_abs		\
 					# ft_rand		\

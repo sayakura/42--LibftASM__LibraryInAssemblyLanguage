@@ -5,7 +5,6 @@ section .text
 ALIGN 16
 
 _ft_strlen:
-	enter 0, 0
 	push rcx
 
 	xor al, al
@@ -17,5 +16,4 @@ _ft_strlen:
 	mov rax, rcx
 
 	pop rcx
-	leave
 	ret

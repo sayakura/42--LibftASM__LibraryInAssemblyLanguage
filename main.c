@@ -6,7 +6,7 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:16:10 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/19 06:58:53 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/19 08:53:05 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,24 @@ int		main(void)
 	for (int i = 32;  i < 127; i++)
 	{
 		sprintf(str, "char: [%c] ret: %d", i, ft_islower(i));
+		printf("%-40s", str);
+		if (i & 1)
+			printf("\n");
+	}
+	ln();
+	printf("%sft_tolower: %s\n", MAGENTA, RESET);
+	for (int i = 32;  i < 127; i++)
+	{
+		sprintf(str, "char: [%c] ret: %c", i, ft_tolower(i));
+		printf("%-40s", str);
+		if (i & 1)
+			printf("\n");
+	}
+	ln();
+	printf("%sft_toupper: %s\n", MAGENTA, RESET);
+	for (int i = 32;  i < 127; i++)
+	{
+		sprintf(str, "char: [%c] ret: %c", i, ft_toupper(i));
 		printf("%-40s", str);
 		if (i & 1)
 			printf("\n");
@@ -154,6 +172,15 @@ int		main(void)
 	int fd = open("libfts.h", O_RDONLY);
 	ft_cat(fd);
 	close(fd);
+	ln();
+	printf("%sft_strcat: %s\n", MAGENTA, RESET);
+	char src[50], dest[50];
+	ft_bzero(src, 50);
+	ft_bzero(dest, 50);
+	strcpy(src,  "This is source\0");
+	strcpy(dest, "This is destination\0");
+	ft_strcat(dest, src);
+	printf("Final destination string : |%s|\n", dest);
 	//free(str2);
 	return (0);
 }
