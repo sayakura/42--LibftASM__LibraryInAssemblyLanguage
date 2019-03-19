@@ -6,7 +6,7 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:16:10 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/19 01:38:15 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/19 06:58:53 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 # define RED     "\x1b[31m"
 # define GREEN   "\x1b[32m"
@@ -147,6 +149,11 @@ int		main(void)
 	char *temp2 =  ft_strdup("aaaaaa\n\0");
 	printf("ft_strdup: %s", temp2);
 	free(temp2);
+	ln();
+	printf("%sft_cat on file libfts.h: %s\n", MAGENTA, RESET);
+	int fd = open("libfts.h", O_RDONLY);
+	ft_cat(fd);
+	close(fd);
 	//free(str2);
 	return (0);
 }

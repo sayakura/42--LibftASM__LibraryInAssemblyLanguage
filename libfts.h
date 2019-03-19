@@ -6,7 +6,7 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:15:59 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/19 00:24:56 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/19 06:45:29 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int		ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, unsigned int len);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, unsigned int n);
 char 	*ft_strdup(const char *s1);
+void	ft_cat(int fd);
 #endif
