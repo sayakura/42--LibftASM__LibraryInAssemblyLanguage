@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/19 08:29:37 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/19 08:59:46 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,16 +60,18 @@ $(ASM_OBJ): %.o: %.s
 	@$(ASM_COMPILER) $< -o $@
 
 clean:
-	@rm test
+	rm *.o
 
-test: clean $(NAME)
+test: clean fclean $(NAME)
 	@gcc main.c $(NAME) -o test
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 	@printf '\e[34m%-51s\e[0m\e[32m[✔]\e[0m\n' "Start Testing"
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 	@./test
 
-fclean:
-	@rm *.o
+fclean: clean
+	rm $(NAME)
+
+re: fclean all
 
 .PHONY: all clean fclean re
