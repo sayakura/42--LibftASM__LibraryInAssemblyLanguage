@@ -8,13 +8,17 @@ make
 make test
 ```
 ### Simple libc functions
-- [x] ft_isascii
-- [x] ft_isdigit
-- [x] ft_isupper
-- [x] ft_isalpha
-- [x] ft_isalnum
-- [x] ft_isprint
-- [x] ft_puts
+- [x] bzero
+- [x] strcat
+- [x] isupper
+- [x] isalpha
+- [x] isdigit
+- [x] isalnum
+- [x] isascii
+- [x] isprint
+- [x] toupper
+- [x] tolower
+- [x] puts
 
 ### A little less simple libc functions
 - [x] ft_strlen
