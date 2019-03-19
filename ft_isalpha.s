@@ -3,22 +3,32 @@ global _ft_isalpha
 section .text
 
 _ft_isalpha:
-	xor edx, edx
 	xor eax, eax
 
-	mov esi, edi
-	sub esi, 65
-	cmp si, 25
-	setbe dl
-
-	mov esi, edi
-	sub esi, 97
-	cmp si, 25
-	setbe dh
-
-	or dl, dh
-	seta al
+	and edi, -33
+	sub edi, 65
+	cmp dil, 25
+	setbe al
 	ret
+
+; _ft_isalpha:
+; 	xor edx, edx
+; 	xor eax, eax
+
+; 	mov esi, edi
+; 	sub esi, 65
+; 	cmp si, 25
+; 	setbe dl
+
+; 	mov esi, edi
+; 	sub esi, 97
+; 	cmp si, 25
+; 	setbe dh
+
+; 	or dl, dh
+; 	seta al
+; 	ret
+
 ; extern _islower
 
 ; extern _isupper

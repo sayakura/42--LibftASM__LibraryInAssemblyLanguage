@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/18 07:31:47 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/18 23:17:54 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,24 +14,24 @@ NAME =				libfts.a
 
 ASM_COMPILER =		nasm -f macho64 -g
 
-ASM_FILES =			ft_strlen \
-					ft_isascii \
+ASM_FILES =			ft_isascii \
 					ft_isdigit \
 					ft_isupper	\
 					ft_islower	\
 					ft_isalpha	\
-					# ft_isalnum	\
-					# ft_isprint	\
+					ft_isalnum	\
+					ft_isprint	\
+					ft_puts		\
+					ft_strlen 	\
+					ft_memset	\
+					ft_memcpy	\
+					ft_strdup	\
 
-					# ft_puts		\
-					# ft_memcpy	\
 					# ft_toupper	\
 					# ft_tolower	\
 					# ft_strcat	\
 					# ft_pow		\
-					# ft_strdup	\
 					# ft_abs		\
-					# ft_memset	\
 					# ft_rand		\
 					# ft_swap		\
 					# ft_collatz	\
@@ -40,7 +40,6 @@ ASM_FILES =			ft_strlen \
 					# ft_atoi		\
 					# ft_align \
 					# ft_cat	\
-					# table_type
 
 ASM_S :=			$(addsuffix .s,$(ASM_FILES))
 ASM_OBJ :=			$(addsuffix .o,$(ASM_FILES))
