@@ -1,23 +1,38 @@
-extern _ft_strlen
+global	_ft_strcat
 
-section .text
-	global _ft_strcat
+section	.text
 
 _ft_strcat:
-	push	rdi
+	test	rdi, rdi
+	jz		.end
+	test	rdi, rdi
+	jz		.end
 
-ignr:
-	cmp	[rdi], byte 0
-	je	cat
-	inc	rdi
-	jmp	ignr
+	mov r11, rdi
+	cld
+	xor al, al
 
-cat:
-	cmp	[rsi], byte 0
-	je	end
-	movsb
-	jmp	cat
+	xor rcx, rcx
 
-end:
-	pop	rax
+	not rcx
+	repne scasb
+	dec rdi
+	mov r10, rdi
+
+
+	xor rcx, rcx
+
+	mov rdi, rsi
+	not rcx
+	repne scasb
+	not rcx
+
+	mov rdi, r10
+	rep movsb
+
+	mov rax, r11
+	ret
+
+.end:
+	mov rax, rdi
 	ret

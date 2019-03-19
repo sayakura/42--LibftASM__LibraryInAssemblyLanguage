@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/19 08:59:46 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/19 09:07:06 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,6 @@ test: clean fclean $(NAME)
 fclean: clean
 	rm $(NAME)
 
-re: fclean all
+re: clean fclean all
 
 .PHONY: all clean fclean re
