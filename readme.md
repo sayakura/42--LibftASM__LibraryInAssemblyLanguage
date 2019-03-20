@@ -10,7 +10,6 @@ make test
 ### Simple libc functions
 - [x] bzero
 - [x] strcat
-- [x] isupper
 - [x] isalpha
 - [x] isdigit
 - [x] isalnum
@@ -21,17 +20,17 @@ make test
 - [x] puts
 
 ### A little less simple libc functions
-- [x] ft_strlen
-- [x] ft_memset
-- [x] ft_memcpy
-- [x] ft_strdup
+- [x] strlen
+- [x] memset
+- [x] memcpy
+- [x] strdup
 
 ### Cat
-- [x] ft_cat
+- [x] cat
 
 ### Bounus
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [x] putchar
+- [x] strchr
+- [x] strcmp
+- [x] isupper
+- [x] islower
