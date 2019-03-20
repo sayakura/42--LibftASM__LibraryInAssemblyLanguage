@@ -6,7 +6,7 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:16:10 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/19 08:53:05 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/20 02:16:08 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,10 +177,17 @@ int		main(void)
 	char src[50], dest[50];
 	ft_bzero(src, 50);
 	ft_bzero(dest, 50);
-	strcpy(src,  "This is source\0");
-	strcpy(dest, "This is destination\0");
+	strcpy(src,  "thatthatthatz");
+	strcpy(dest, "this a string");
 	ft_strcat(dest, src);
 	printf("Final destination string : |%s|\n", dest);
+	char src1[50], dest1[50];
+	ft_bzero(src1, 50);
+	ft_bzero(dest1, 50);
+	strcpy(src1,  "thatthatthatz");
+	strcpy(dest1, "this a string");
+	strcat(dest1, src1);
+	printf("Final destination string : |%s|\n", dest1);
 	//free(str2);
 	return (0);
 }

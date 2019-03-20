@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/19 09:07:06 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/20 03:00:17 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,10 @@ ASM_FILES =			ft_bzero 	\
 					ft_memset	\
 					ft_memcpy	\
 					ft_strdup	\
-					ft_cat	\
-					 ft_strcat	\
+					ft_cat	    \
+					ft_strcat	\
+					ft_memcpy   \
+					
 					# ft_toupper	\
 					# ft_tolower	\
 
