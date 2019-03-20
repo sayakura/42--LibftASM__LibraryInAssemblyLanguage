@@ -6,7 +6,7 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:16:10 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/20 02:16:08 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/20 06:15:35 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -188,6 +188,45 @@ int		main(void)
 	strcpy(dest1, "this a string");
 	strcat(dest1, src1);
 	printf("Final destination string : |%s|\n", dest1);
+	ln();
+	printf("%sft_strcmp: %s\n", MAGENTA, RESET);
+	const char *strcmp1 = "123";
+	const char *strcmp2 = "12";
+	printf("ret: %d, str1: [%s], str2: [%s]\n", ft_strcmp(strcmp1, strcmp2), strcmp1, strcmp2);
+	printf("ret: %d, str1: [%s], str2: [%s]\n", strcmp(strcmp1, strcmp2), strcmp1, strcmp2);
+	const char *strcmp3 = "12";
+	const char *strcmp4 = "12";
+	printf("ret: %d, str1: [%s], str2: [%s]\n", ft_strcmp(strcmp3, strcmp4), strcmp3, strcmp4);
+	printf("ret: %d, str1: [%s], str2: [%s]\n", strcmp(strcmp3, strcmp4), strcmp3, strcmp4);
+	const char *strcmp5 = "12";
+	const char *strcmp6 = "123";
+	printf("ret: %d, str1: [%s], str2: [%s]\n", ft_strcmp(strcmp5, strcmp6), strcmp5, strcmp6);
+	printf("ret: %d, str1: [%s], str2: [%s]\n", strcmp(strcmp5, strcmp6), strcmp5, strcmp6);
+	const char *null1 = "";
+	const char *null2 = "";
+	printf("ret: %d, str1: [%s], str2: [%s]\n", ft_strcmp(null1, null2), null1, null2);
+	printf("ret: %d, str1: [%s], str2: [%s]\n", strcmp(null1, null2), null1, null2);
 	//free(str2);
+	ln();
+	printf("%sft_strchr: %s\n", MAGENTA, RESET);
+	const char *zz = "The strchr() function locates the first occurrence of c";
+	int c = 'f';
+	printf("str: %s, char: %c\n", zz, c);
+	printf("ret: %s\n", ft_strchr(zz, c));
+	c = '\0';
+	printf("str: %s, char: %c\n", zz, c);
+	printf("ret: %s\n", ft_strchr(zz, c));
+	c = 122;
+	printf("str: %s, char: %c\n", zz, c);
+	printf("ret: %s\n", ft_strchr(zz, c));
+	ln();
+	printf("%sft_putchar: %s\n", MAGENTA, RESET);
+	int ch = 'a';
+	printf("\nret: %c\n", ft_putchar(ch));
+	ft_putchar('\n');
+	ft_putchar('f');
+	ft_putchar('\n');
+	ft_putchar('\0');
+	ft_putchar('\n');
 	return (0);
 }

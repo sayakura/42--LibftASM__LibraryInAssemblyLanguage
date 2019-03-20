@@ -6,9 +6,9 @@ extern _ft_strlen
 _ft_strcat:
 	mov 	r10, rdi
 
-	test	dil, dil
+	test	rdi, rdi
 	jz		.end
-	test	si, si
+	test	rsi, rsi
 	jz		.end
 
 	mov rdi, rsi

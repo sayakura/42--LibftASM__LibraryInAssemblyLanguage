@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/20 03:00:17 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/20 06:27:39 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,21 +31,9 @@ ASM_FILES =			ft_bzero 	\
 					ft_strdup	\
 					ft_cat	    \
 					ft_strcat	\
-					ft_memcpy   \
-					
-					# ft_toupper	\
-					# ft_tolower	\
-
-					# ft_pow		\
-					# ft_abs		\
-					# ft_rand		\
-					# ft_swap		\
-					# ft_collatz	\
-					# ft_memchr	\
-					# ft_strncmp	\
-					# ft_atoi		\
-					# ft_align \
-
+					ft_strcmp   \
+					ft_strchr   \
+					ft_putchar
 
 ASM_S :=			$(addsuffix .s,$(ASM_FILES))
 ASM_OBJ :=			$(addsuffix .o,$(ASM_FILES))
@@ -61,8 +49,8 @@ $(NAME): $(ASM_OBJ)
 $(ASM_OBJ): %.o: %.s
 	@$(ASM_COMPILER) $< -o $@
 
-clean:
-	rm *.o
+clean :
+	rm -f $(ASM_OBJ)
 
 test: clean fclean $(NAME)
 	@gcc main.c $(NAME) -o test
@@ -71,9 +59,9 @@ test: clean fclean $(NAME)
 	@printf "\e[32m------------------------------------------------------\e[0m\n"
 	@./test
 
-fclean: clean
-	rm $(NAME)
+fclean: clean 
+	rm -f $(NAME)
 
-re: clean fclean all
+re: fclean all
 
 .PHONY: all clean fclean re
