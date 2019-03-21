@@ -1,8 +1,5 @@
-section .data
-    fmt db"%c %c",0x10,0
 section .text
     global _ft_strcmp
-extern _printf
 
 _ft_strcmp:
     cmp byte [rsi], 0
