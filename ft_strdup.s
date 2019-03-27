@@ -16,12 +16,18 @@ _ft_strdup:
 	mov rdi, rax
 	call _malloc
 	test rax, rax
-	jz .end
+	jz .failed
 
 	mov rdi, rax
 	pop rdx
 	pop rsi
 	call _ft_memcpy
+	jmp .end
+	
+.failed:
+	pop rdi
+	pop rdi
+	xor rax, rax
 .end:
 	leave
 	ret
