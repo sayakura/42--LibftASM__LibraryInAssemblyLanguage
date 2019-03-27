@@ -2,13 +2,18 @@ section .text
     global _ft_strcmp
 
 _ft_strcmp:
-    cmp byte [rsi], 0
+.lp:
+    mov al, byte [rdi]
+    test al, al
     jz .end
-    repne cmpsb 
-    dec rdi
-    dec rsi
+    cmp al, byte [rsi]
+    jnz .end
+    inc rdi
+    inc rsi
+    jmp .lp
 
 .end:
-    mov rax, rsi
-    sub rax, rdi
+    movzx rax, byte [rdi]
+    movzx rsi, byte [rsi]
+    sub rax ,rsi
     ret 
