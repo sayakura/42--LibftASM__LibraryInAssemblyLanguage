@@ -6,7 +6,7 @@
 #    By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/18 05:06:34 by qpeng             #+#    #+#              #
-#    Updated: 2019/03/20 06:27:39 by qpeng            ###   ########.fr        #
+#    Updated: 2019/03/31 04:02:00 by qpeng            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ ASM_FILES =			ft_bzero 	\
 					ft_cat	    \
 					ft_strcat	\
 					ft_strcmp   \
+					ft_strncmp   \
 					ft_strchr   \
 					ft_putchar
 

@@ -6,7 +6,7 @@
 /*   By: qpeng <qpeng@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/15 22:15:59 by qpeng             #+#    #+#             */
-/*   Updated: 2019/03/20 05:23:33 by qpeng            ###   ########.fr       */
+/*   Updated: 2019/03/31 04:03:55 by qpeng            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	ft_cat(int fd);
 void	ft_bzero(void *s, unsigned int n);
 char	*ft_strcat(char *restrict s1, const char *restrict s2);
 int     ft_strcmp(const char *s1, const char *s2);
+int     ft_strncmp(const char *s1, const char *s2, unsigned int size);
 char    *ft_strchr(const char *s, int c);
 int     ft_putchar(int c);
 #endif

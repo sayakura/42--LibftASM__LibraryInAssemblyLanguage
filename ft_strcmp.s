@@ -5,15 +5,29 @@ _ft_strcmp:
 .lp:
     mov al, byte [rdi]
     test al, al
-    jz .end
-    cmp al, byte [rsi]
+    jz .diff
+    sub al, byte [rsi]
     jnz .end
     inc rdi
     inc rsi
     jmp .lp
-
+.diff:
+    sub al, byte [rsi]
 .end:
-    movzx rax, byte [rdi]
-    movzx rsi, byte [rsi]
-    sub rax ,rsi
+    movsx eax, al
     ret 
+
+
+; _strcmp:
+;     movzx    eax, byte ptr [rdi]
+;     movzx    ecx, byte ptr [rsi]
+;     cmp    al, cl
+;     jne    13 <_strcmp+0x17>
+;     inc    rsi
+;     inc    rdi
+;     test    al, al
+;     jne    -20 <_strcmp>
+;     xor    eax, eax
+;     ret
+;     sub    eax, ecx
+;     ret
