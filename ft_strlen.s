@@ -2,8 +2,6 @@ global _ft_strlen
 
 section .text
 
-ALIGN 16
-
 _ft_strlen:
 	push rcx
 
