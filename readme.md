@@ -1,4 +1,4 @@
-# 42--minishell__LibraryInAssemblyLanguage
+# 42--LibftASM__LibraryInAssemblyLanguage
 ### *Recoding some basic functions of the libc.*
 
 ## Usage
